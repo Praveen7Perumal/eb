@@ -1,0 +1,649 @@
+<!--  <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+<div class="container">
+        <a class="btn btn-left"><i class="fa-solid fa-caret-left"></i></a>
+        <a class="btn btn-right"><i class="fa-solid fa-caret-right"></i></a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	
+const container=document.querySelector('.container');
+const btns=document.querySelectorAll('.btn')
+const imgList=["1","2","3","4"]
+
+let index=0
+btns.forEach((button)=>{
+    button.addEventListener('click',()=>
+    {
+    	// console.log("clicked");
+        if(button.classList.contains('btn-left'))
+        {
+            index--;
+            if(index<0){
+                index=imgList.length-1;
+            }
+            container.style.background = `url("${imgList[index]}.jpg") center/cover fixed no-repeat`
+        }
+        else{
+            index++;
+            if(index===imgList.length){
+                index=0;
+            }
+            container.style.background = `url("${imgList[index]}.jpg") center/cover fixed no-repeat`
+        }
+    })
+})
+
+</script>
+
+</body>
+</html> 
+ -->
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>video</title>
+	<style>
+		.container
+		{
+			height: 500px;
+			width: 80%;
+			margin-left: 10%;
+			border: 1px solid;
+			margin-top: 5%;
+			position: relative;
+		}
+		.container img
+		{
+			height: 500px;
+			width: 100%;
+			z-index: 1;
+		}
+		.container:hover img
+		{
+			display: none;
+		}
+		.container video
+		{
+			height: 500px;
+			width: 100%;
+			position: absolute;
+			right: 0%;
+			z-index: -1;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="1.jpg">
+		<video src="p3.mp4" controls loop autoplay muted>
+		</video>
+	</div>
+</body>
+</html> 
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	 <label>Number</label>
+	<input type="number" id="praveen">
+	<button onclick="show()">submit</button>
+	<h1 id="demo"></h1>
+  -->
+
+
+<!-- <h1 id="demo"></h1> -->
+
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h2>TAMIL NADU ELECTRICITY BOARD OF INDIA</h2>
+
+	<label>Units</label>
+	<input type="number" id="praveen">
+	<button onclick="show()">submit</button>
+	<h1 id="demo"></h1>
+
+
+	<table>
+		<tr>	
+			<th>No</th>
+			<th>Units</th>
+			<th>Per Unit</th>
+			<th>Tax</th>
+			<th>Total</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td id="p1"></td>
+			<td id="p2"></td>
+			<td id="p3"></td>
+			<td id="p4"></td>
+		</tr>	
+	</table>
+
+
+	<script>	
+function show()
+		{
+			let result=document.getElementById("praveen").value;
+			if(result<=100)
+			{
+				document.getElementById("p1").innerHTML=result;
+				document.getElementById("p2").innerHTML="0";
+				document.getElementById("p3").innerHTML="0";
+				document.getElementById("p4").innerHTML="no charge";
+			}
+			else if(result<=200)
+			{
+				document.getElementById("p1").innerHTML=result;
+				document.getElementById("p2").innerHTML="2.5";
+				document.getElementById("p3").innerHTML=(result*2.5)/20;
+				document.getElementById("p4").innerHTML=(result*2.5)/20+(result*2.5);
+			}
+			else if(result<=300)
+			{
+				document.getElementById("p1").innerHTML=result;
+				document.getElementById("p2").innerHTML="3.5";
+				document.getElementById("p3").innerHTML=(result*3.5)/20;
+				document.getElementById("p4").innerHTML=(result*3.5)/20+(result*3.5);
+			}
+			else if(result<=400)
+			{
+				document.getElementById("p1").innerHTML=result;
+				document.getElementById("p2").innerHTML="4.5";
+				document.getElementById("p3").innerHTML=(result*4.5)/20;
+				document.getElementById("p4").innerHTML=(result*4.5)/20+(result*4.5);
+			}
+			else if(result<=500)
+			{
+				document.getElementById("p1").innerHTML=result;
+				document.getElementById("p2").innerHTML="3.5";
+				document.getElementById("p3").innerHTML=(result*5.5)/20;
+				document.getElementById("p4").innerHTML=(result*5.5)/20+(result*5.5);
+			}
+			else if(result<=600)
+			{
+				document.getElementById("p1").innerHTML=result;
+				document.getElementById("p2").innerHTML="3.5";
+				document.getElementById("p3").innerHTML=(result*5.5)/20;
+				document.getElementById("p4").innerHTML=(result*5.5)/20+(result*5.5);
+			}
+			else if(result<=700)
+			{
+				document.getElementById("p1").innerHTML=result;
+				document.getElementById("p2").innerHTML="3.5";
+				document.getElementById("p3").innerHTML=(result*5.5)/20;
+				document.getElementById("p4").innerHTML=(result*5.5)/20+(result*5.5);
+			}
+			else if(result<=800)
+			{
+				document.getElementById("p1").innerHTML=result;
+				document.getElementById("p2").innerHTML="3.5";
+				document.getElementById("p3").innerHTML=(result*5.5)/20;
+				document.getElementById("p4").innerHTML=(result*5.5)/20+(result*5.5);
+			}
+			else if(result<=900)
+			{
+				document.getElementById("p1").innerHTML=result;
+				document.getElementById("p2").innerHTML="3.5";
+				document.getElementById("p3").innerHTML=(result*5.5)/20;
+				document.getElementById("p4").innerHTML=(result*5.5)/20+(result*5.5);
+			}
+			else
+			{
+				document.getElementById("p1").innerHTML=result;
+				document.getElementById("p2").innerHTML="0";
+				document.getElementById("p3").innerHTML="0";
+				document.getElementById("p4").innerHTML="contact near EB office";
+			}			
+		}
+
+
+
+	</script>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+<script>
+	
+	//  function show()
+	//  {
+	// let res=document.getElementById("praveen").value;
+	// 	if (res>0)
+
+	
+	// {
+	// 	document.getElementById("demo").innerHTML="positive";
+	//  }
+	//  else if(res<0)
+	//  {
+	// 	document.getElementById("demo").innerHTML="Negative";
+	//  }
+	//  else
+	//  {
+	//  	document.getElementById("demo").innerHTML="None";
+	//  }
+
+	//  }
+
+
+
+// nested if
+
+
+	// var x=0;
+	// if(x==0)
+	// {
+	// 	console.log("positive nor negative");
+	// }
+	// else if(x>0)
+	// {
+	// 	if(x<10)
+	// 	{
+	// 		console.log("single digit no");
+	// 	}
+	// 	else
+	// 	{
+			
+	// 		console.log("double digit no");
+	// 	}
+	// }
+	// else
+	// {
+	// 	console.log("negative no");
+	// }
+
+
+
+
+// switch case
+
+
+
+// let day;
+// switch(new Date().getDay())
+// {
+// case 0:
+// 	{
+// 		day="Sunday";
+// 		break;
+// 	}
+// case 1:
+// 	{
+// 		day="Monday";
+// 		break;
+// 	}
+// case 2:
+// 	{
+// 		day="Tuesday";
+// 		break;
+// 	}
+// case 3:
+// 	{
+// 		day="Wednesday";
+// 		break;
+// 	}
+// case 4:
+// 	{
+// 		day="Thursday";
+// 		break;
+// 	}
+// case 5:
+// 	{
+// 		day="Friday";
+// 		break;
+// 	}
+// case 6:
+// 	{
+// 		day="Saturday";
+// 		break;
+// 	}						
+// }
+// document.getElementById("demo").innerHTML="Today is" + day;
+
+
+
+// for
+
+
+// let user={ Name:"Praveen",Age:20, Position:"Developer", Package:"3.L"}
+// // for(i in user)
+// // {
+// // 	console.log(i);
+// // }
+// for(i in user)
+// {
+// 	console.log(i+":"+user[i]);
+// }
+
+
+
+// function show()
+// {
+// 	let res=document.getElementById("demo").value;
+	
+// 		if(res==1)
+// 		{
+// 			document.getElementById("sample").innerHTML="Stop";
+// 		}
+// 		else if(res==2)
+// 		{
+// 			document.getElementById("sample").innerHTML="Get Ready For Ride";
+// 		}
+// 		else
+// 		{
+// 			document.getElementById("sample").innerHTML="go";
+// 		}
+	
+
+// }
+
+
+
+
+
+
+// while
+
+
+
+
+
+// let res="";
+// let i=1;
+// while (i<=10)
+// {
+// 	res+="<br>"+i;
+// 	i++;
+// }
+// document.getElementById("demo").innerHTML=res;
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<!-- EB Bill Calculater -->
+
+
+
+
+<!-- </body>
+</html> -->
+<!-- 
+<html>
+<head>
+<title>EB Bill Calculator Using javascript</title>
+</head>
+<body>
+<form method="post">
+    <fieldset>
+        <legend>EB Bill Validator Meter no "1234"</legend>
+Please Enter Meter Number:<input type="text" name="number" id="number" />
+<input type="button" name="submit" id="submit" onclick="getaction()" value="go"/>
+<p id="demo"> </p>
+<div id="options" style="display:none;">
+<input type='radio' name='radio' onclick='myfunction(this.value)' value='1'/>Agriculture
+<input type='radio' name='radio' onclick='myfunction(this.value)' value='2'/>Domestic
+<input type='radio' name='radio' onclick='myfunction(this.value)' value='3'/>Commercial
+</div>
+<div id="display1" style="display:none;">
+<label>Please Enter Number of Units Consumed</label>
+<input type="text" name="amount1" id="amount1" value=""/>
+<input type="submit" name="submit1" value="submit" onclick="getamount1()"/>
+</div>
+<div id="display2" style="display:none;">
+<label>Please Enter Number of Units Consumed</label>
+<input type="text" name="amount2" id="amount2" value=""/>
+<input type="submit" name="submit2" value="submit" onclick="getamount2()"/>
+</div>
+<div id="display3" style="display:none;">
+<label>Please Enter Number of Units Consumed</label>
+<input type="text" name="amount3" id="amount3" value=""/>
+<input type="submit" name="submit3" value="submit" onclick="getamount3()"/>
+</div>
+</fieldset>
+</form>
+</body>
+<script type="text/javascript">
+function getaction()
+{
+//Intialise textbox value in varible m
+var m=document.getElementById ('number').value;
+var a=1234;
+//To check meter number entered is correct or not
+if(m==a)
+{
+document.getElementById ("demo").innerHTML ="Please Choose Category";
+document.getElementById ('options').style.display = 'block';//If meeter number is correct options will appear.
+}
+else
+{
+document.getElementById ("demo").innerHTML = "Invalid pin";
+}
+}
+function myfunction(val)
+{
+//funciton to display required fields
+if(val==1)
+{
+document.getElementById ('display1').style.display ='block';
+document.getElementById ('display2').style.display ='none';
+document.getElementById ('display3').style.display = 'none';
+}
+if(val==2)
+{
+document.getElementById ('display1').style.display ='none';
+document.getElementById ('display2').style.display = 'block';
+document.getElementById ('display3').style.display ='none';
+}
+if(val==3)
+{
+document.getElementById ('display1').style.display ='none';
+document.getElementById ('display2').style.display = 'none';
+document.getElementById ('display3').style.display ='block';
+}
+}
+function getamount1()
+{
+//Intialise the textbox value in varible
+var u = document.getElementById ('amount1').value;
+var s = 20;
+var bill = 0.0;
+if(u>0 && u<50)
+{
+bill = (u*0.25)+s;//To Get power bill for units
+document.getElementById ('display1').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=50 && u<150)
+{
+bill = (u*0.55)+s;
+document.getElementById('display1').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=150 && u<300)
+{
+bill = (u*0.80)+s;
+document.getElementById('display1').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=300 && u<500)
+{
+bill = (u*1)+s;
+document.getElementById('display1').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=500 && u<1000)
+{
+bill = (u*2)+s;
+document.getElementById('display1').innerHTML = "Bill amount: "+bill;
+}
+else
+{
+document.getElementById('display1').innerHTML = "Invalid units";
+}
+}
+
+function getamount2()
+{
+var u = document.getElementById ('amount2').value;
+var s = 35;
+var bill = 0.0;
+if(u>0 && u<50)
+{
+bill = (u*1.35)+s;
+document.getElementById('display2').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=50 && u<150)
+{
+bill = (u*2.15)+s;
+document.getElementById('display2').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=150 && u<300)
+{
+bill = (u*3)+s;
+document.getElementById('display2').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=300 && u<500)
+{
+bill = (u*3.5)+s;
+document.getElementById('display2').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=500 && u<1000)
+{
+bill = (u*6)+s;
+document.getElementById('display2').innerHTML = "Bill amount: "+bill;
+}
+else
+{
+document.getElementById('display2').innerHTML = "Invalid units";
+}
+}
+function getamount3()
+{
+var u = document.getElementById ('amount3').value;
+var s = 65;
+var bill = 0.0;
+if(u>0 && u<50)
+{
+bill = (u*3)+s;
+document.getElementById ('display3').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=50 && u<150)
+{
+bill = (u*4.5)+s;
+document.getElementById ('display3').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=150 && u<300)
+{
+bill = (u*5.5)+s;
+document.getElementById ('display3').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=300 && u<500)
+{
+bill = (u*6.8)+s;
+document.getElementById ('display3').innerHTML = "Bill amount: "+bill;
+}
+else
+if(u>=500 && u<1000)
+{
+bill = (u*9)+s;
+document.getElementById ('display3').innerHTML = "Bill amount: "+bill;
+}
+else
+{
+document.getElementById ('display3').innerHTML = "Invalid units";
+}
+}
+</script>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
